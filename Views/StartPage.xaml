@@ -2,9 +2,40 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ragna_RPG.Views.StartPage"
-             NavigationPage.HasNavigationBar="False">
-    <Grid>
-        <!-- Background Image -->
-        <Image Source="mainmenubg.png" Aspect="AspectFill" Grid.RowSpan="3" />
-    </Grid>
+             Shell.NavBarIsVisible="False"
+             BackgroundImageSource="background.png">
+
+    <AbsoluteLayout>
+        <!-- Ragna Logo -->
+        <Image x:Name="LogoImage"
+               Source="ragnalogo2.png"
+               AbsoluteLayout.LayoutBounds="0.5, 0.1, 0.8, 0.3"
+               AbsoluteLayout.LayoutFlags="All"
+               Aspect="AspectFit"
+               Opacity="0"
+               Scale="0"/>
+
+        <!-- Custom Button Image -->
+        <Image x:Name="CustomButtonImage"
+               Source="custombutton.png"
+               AbsoluteLayout.LayoutBounds="0.5, 0.65, 0.8, 0.4"
+               AbsoluteLayout.LayoutFlags="All"
+               Aspect="AspectFit"
+               Opacity="0"
+               Scale="0"/>
+
+        <!-- Invisible Play Button -->
+        <Button x:Name="PlayButton"
+                BackgroundColor="Transparent"
+                AbsoluteLayout.LayoutBounds="0.5, 0.65, 0.4, 0.1"
+                AbsoluteLayout.LayoutFlags="All"
+                Clicked="OnPlayButtonClicked"/>
+
+        <!-- Invisible Exit Button -->
+        <Button x:Name="ExitButton"
+                BackgroundColor="Transparent"
+                AbsoluteLayout.LayoutBounds="0.5, 0.80, 0.4, 0.1"
+                AbsoluteLayout.LayoutFlags="All"
+                Clicked="OnExitButtonClicked"/>
+    </AbsoluteLayout>
 </ContentPage>

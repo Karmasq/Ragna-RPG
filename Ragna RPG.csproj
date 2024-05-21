@@ -67,12 +67,14 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\mainmenubg.png" />
+	  <None Remove="Resources\Raw\RagnaRPGTheme.m4a" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+		<PackageReference Include="Plugin.Maui.Audio" Version="2.1.0" />
 	</ItemGroup>
 
 	<ItemGroup>

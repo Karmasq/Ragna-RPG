@@ -1,4 +1,8 @@
-﻿namespace Ragna_RPG
+﻿using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls.Xaml;
+
+namespace Ragna_RPG
 {
     public partial class App : Application
     {
@@ -7,7 +11,9 @@
             InitializeComponent();
 
             MainPage = new AppShell();
+
+            // Set initial page to SplashPage
+            Shell.Current.GoToAsync("//SplashPage");
         }
     }
 }
-

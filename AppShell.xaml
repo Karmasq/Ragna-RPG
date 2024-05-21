@@ -2,12 +2,11 @@
 <Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:Ragna_RPG.Views"
-       x:Class="Ragna_RPG.AppShell">
+       x:Class="Ragna_RPG.AppShell"
+       Shell.NavBarIsVisible="False">
 
-    <ShellContent Title="Inicio"
-                  ContentTemplate="{DataTemplate views:StartPage}" />
-    <ShellContent Title="Opciones"
-                  ContentTemplate="{DataTemplate views:OptionsPage}" />
-    <ShellContent Title="Juego"
-                  ContentTemplate="{DataTemplate views:MainPage}" />
+    <ShellContent Title="SplashPage" Route="SplashPage" ContentTemplate="{DataTemplate views:SplashPage}" />
+    <ShellContent Title="Inicio" Route="StartPage" ContentTemplate="{DataTemplate views:StartPage}" />
+    <ShellContent Title="Opciones" Route="OptionsPage" ContentTemplate="{DataTemplate views:OptionsPage}" />
+    <ShellContent Title="Juego" Route="MainPage" ContentTemplate="{DataTemplate views:MainPage}" />
 </Shell>
